@@ -15,4 +15,7 @@ describe("String#scrabble") do
     expect("spring".scrabble()).to(eq(9))
   end
 
+  it("returns a scrabble score for a word containing uppercase letters") do
+    expect("SPring".scrabble()).to(eq(9))
+  end
 end
