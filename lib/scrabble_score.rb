@@ -1,15 +1,12 @@
 class String
   define_method(:scrabble) do
-    scrabble_dict = {['a', 'e', 'i', 'o', 'u', 'l', 'n', 'r', 's', 't'] => 1,
-      ['d', 'g'] => 2, ['b','c','m','p'] => 3, ['f','h','v','w','y'] => 4,
-      ['k'] => 5, ['j', 'x'] => 8, ['q','z'] =>10}
+    scrabble_dict = {'a'=>1, 'e'=>1, 'i'=>1, 'o'=>1, 'u'=>1, 'l'=>1, 'n'=>1,
+       'r'=>1, 's'=>1, 't'=>1, 'd'=>2, 'g'=>2,'b'=>3,'c'=>3,'m'=>3,'p'=>3, 'f'=>4,
+       'h'=>4,'v'=>4,'w'=>4,'y'=>4, 'k'=>5, 'j'=>8, 'x' => 8, 'q'=>10,'z' =>10}
     total_score = 0
-    self.split('').each() do |letter|
-      scrabble_dict.each() do |letters, score|
-        if letters.include?(letter)
-          total_score = total_score + score
-        end
-      end
+    split('').each() do |letter|
+      letter_score = scrabble_dict.fetch(letter)
+      total_score = total_score + letter_score
     end
     total_score
   end
