@@ -1,7 +1,6 @@
 Scrabble Score
 ==============
 
-*Authors: Ben Cornelis and Jeremy Greenwood*
+*Authors: Ben Cornelis and Jennifer Minetree*
 
-Description: We create a scrabble method on the string class that calculates
-the scrabble score for the string.
+Description: We create a Sinatra app that calculates the score of a Scrabble word inputed by the user.
